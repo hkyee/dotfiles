@@ -1,0 +1,8 @@
+#!/bin/sh
+
+feh --bg-fill ~/Pictures/Wallpapers/download2.jpeg &
+picom &
+xrandr --output HDMI-1-0 --auto --right-of eDP-1 &
+slstatus &
+dwm
+
