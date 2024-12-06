@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/home/herrken'
+let g:netrw_dirhist_5='/home/herrken/dotfiles'
+let g:netrw_dirhist_4='/home/herrken/dotfiles/vim'
+let g:netrw_dirhist_3='/home/herrken/dotfiles/vim/.vim'
+let g:netrw_dirhist_2='/home/herrken/dotfiles/vim/.vim/colors'
+let g:netrw_dirhist_1='/home/herrken/dotfiles/vim/.vim'

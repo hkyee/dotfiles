@@ -16,6 +16,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup("j.plugins")
 
 vim.o.background = "dark" -- or "light" for light mode
+vim.cmd.colorscheme("everforest")
 
 vim.opt.clipboard = 'unnamedplus'
 vim.opt.number = true
