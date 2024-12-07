@@ -282,10 +282,6 @@ show_file_or_dir_preview="if [ -d {} ]; then eza --tree --color=always {} | head
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 
-# ---- thefuck ----
-eval $(thefuck --alias)
-# You can use whatever you want as an alias, like for Mondays:
-eval $(thefuck --alias fk)
 
 # ---- zoxide ----
 eval "$(zoxide init zsh)"
