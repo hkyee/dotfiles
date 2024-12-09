@@ -35,3 +35,12 @@ https://github.com/MidnightCommander/mc
 ### tldr
 https://github.com/tldr-pages/tldr
 
+
+## Additional Info
+To adjust the transparency of windows, PICOM is required. 
+1. Simple Terminal (ST)
+- Change the _alpha_ setting under *bg opacity*
+
+2. Every other window
+- Modify _defaultopacity_
+- To change other settings including blur, modify in /etc/xdg/picom.conf
