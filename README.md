@@ -39,8 +39,10 @@ https://github.com/tldr-pages/tldr
 ## Additional Info
 To adjust the transparency of windows, PICOM is required. 
 1. Simple Terminal (ST)
-- Change the _alpha_ setting under *bg opacity*
+- Change the _alpha_ setting under *bg opacity* in '../st/config.h'
 
 2. Every other window
-- Modify _defaultopacity_
-- To change other settings including blur, modify in /etc/xdg/picom.conf
+- Modify _defaultopacity_ in '../dwm/config.h'
+- To change other settings including blur, modify in '/etc/xdg/picom.conf'
+
+Adjusting _alpha_ and _defaultopacity_ takes precedence over makign changes directly in the 'picom.conf' file
