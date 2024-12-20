@@ -323,7 +323,8 @@ alias m='sudo mount /dev/sdb1 /media/herrken'
 # ---- Bat Cat ----
 alias cat='batcat $1'
 
-
+# ---- Git Graph ----
+alias graph='git log --oneline --all --graph'
 
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
