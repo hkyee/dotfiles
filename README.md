@@ -35,6 +35,8 @@ https://github.com/MidnightCommander/mc
 ### tldr
 https://github.com/tldr-pages/tldr
 
+### safeeyes
+https://github.com/slgobinath/SafeEyes
 
 ## Additional Info
 To adjust the transparency of windows, PICOM is required. 
