@@ -4,5 +4,6 @@ feh --bg-fill ~/Pictures/Wallpapers/IMG_2496.png &
 picom &
 xrandr --output HDMI-1-0 --auto --right-of eDP-1 &
 slstatus &
-dwm
+dwm &
+safeeyes
 
