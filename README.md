@@ -4,6 +4,7 @@ This is a Repo for Herr Ken's portable Linux setup
 
 
 ### 1.suckless
+    - (suckless.org)
 	- Autostart script called at /usr/share/xsessions/dwm.desktop
 	- sudo make clean install
 
