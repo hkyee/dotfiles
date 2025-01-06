@@ -9,6 +9,7 @@ This is a Repo for Herr Ken's portable Linux setup
 
 ### 2.zsh
 	- Put .zshrc in home
+	- Put .zshenv in home
 ### 3.vim
 	- Put .vimrc in home
 	- Put .vim in home
