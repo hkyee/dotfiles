@@ -3,17 +3,17 @@
 This is a Repo for Herr Ken's portable Linux setup 
 
 
-### 1.[suckless](suckless.org)
+### 1. [suckless](suckless.org)
 	- Autostart script called at /usr/share/xsessions/dwm.desktop
 	- sudo make clean install
 
-### 2.zsh
+### 2. zsh
 	- Put .zshrc in home
 	- Put .zshenv in home
-### 3.vim
+### 3. vim
 	- Put .vimrc in home
 	- Put .vim in home
-### 4.[nvim](https://github.com/neovim/neovim/blob/master/INSTALL.md)
+### 4. [nvim](https://github.com/neovim/neovim/blob/master/INSTALL.md)
 	- Put folder in ~/.config
 
 ## Tools 
