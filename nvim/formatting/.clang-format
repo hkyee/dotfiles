@@ -1,0 +1,8 @@
+IndentWidth: 4
+BasedOnStyle: LLVM
+BreakBeforeBraces: Allman
+AllowShortIfStatementsOnASingleLine: false
+SpaceBeforeParens: ControlStatements
+PointerAlignment: Left
+
+

@@ -8,13 +8,14 @@ This is a Repo for Herr Ken's portable Linux setup
 	- sudo make clean install
 
 ### 2. zsh
-	- Put .zshrc in home
-	- Put .zshenv in home
+	- Link .zshrc in home
+	- Link .zshenv in home
 ### 3. vim
-	- Put .vimrc in home
-	- Put .vim in home
+	- Link .vimrc in home
+	- Link .vim in home
 ### 4. [nvim](https://github.com/neovim/neovim/blob/master/INSTALL.md)
-	- Put folder in ~/.config
+	- Link folder in ~/.config
+	- Link all files in formatting in ~ 
 
 ## Tools 
 
