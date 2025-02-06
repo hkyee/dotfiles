@@ -326,6 +326,8 @@ alias cat='batcat $1'
 # ---- Git Graph ----
 alias graph='git log --oneline --all --graph'
 
+# ---- OBS ----
+alias obs='flatpak run com.obsproject.Studio'
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
