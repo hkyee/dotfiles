@@ -329,6 +329,12 @@ alias graph='git log --oneline --all --graph'
 # ---- OBS ----
 alias obs='flatpak run com.obsproject.Studio'
 
+# ---- xfce4-panel ----
+alias panel='xfce4-panel'
+
+# ---- bluetooth ----
+alias blue='blueman-manager'
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
