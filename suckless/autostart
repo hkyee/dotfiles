@@ -1,6 +1,6 @@
 #!/bin/sh
 
-feh --bg-fill ~/Pictures/Wallpapers/IMG_2496.png &
+feh --bg-fill ~/Pictures/Wallpapers/Grey.png &
 picom &
 xrandr --output HDMI-1-0 --auto --above eDP-1 --rotate inverted &
 slstatus &
