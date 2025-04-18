@@ -13,3 +13,7 @@ export PATH=$JAVA_HOME/bin:$PATH
 
 export PATH="$PATH:/opt/nvim-linux64/bin"
 
+
+# -- Microsoft SQL Server --
+export PATH="$PATH:/opt/mssql-tools18/bin"
+. "$HOME/.cargo/env"

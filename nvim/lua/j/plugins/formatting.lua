@@ -8,8 +8,11 @@ return {
 			formatters_by_ft = {
 
 				javascript = { "prettier" },
+				html = { "prettier" },
+				css = { "prettier" },
 				python = { "black" },
 				lua = { "stylua" },
+				tex = { "latexindent" },
 			},
 			format_on_save = {
 				lsp_fallback = true,

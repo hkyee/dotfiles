@@ -17,27 +17,27 @@ This is a Repo for Herr Ken's portable Linux setup
 	- Link folder in ~/.config
 	- Link all files in formatting in ~ 
 
-## Tools 
+## CLI Tools 
 
-### fzf
+### 1. fzf
 https://github.com/junegunn/fzf?tab=readme-ov-file#installation
 
-### batcat
+### 2. batcat
 https://github.com/sharkdp/bat
 
-### eza
+### 3. eza
 https://github.com/eza-community/eza
 
-### zoxide
+### 4. zoxide
 https://github.com/ajeetdsouza/zoxide
 
-### mc
+### 5. mc
 https://github.com/MidnightCommander/mc
 
-### tldr
+### 6. tldr
 https://github.com/tldr-pages/tldr
 
-### safeeyes
+### 7. safeeyes
 https://github.com/slgobinath/SafeEyes
 
 ## Additional Info

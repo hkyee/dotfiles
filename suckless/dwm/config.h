@@ -6,7 +6,8 @@ static const unsigned int gappx = 5;    /* gaps between windows */
 static const unsigned int snap = 32;    /* snap pixel */
 static const int showbar = 0;           /* 0 means no bar */
 static const int topbar = 1;            /* 0 means bottom bar */
-static const double defaultopacity = 0.8;
+static const int nmaxmaster = 3;
+static const double defaultopacity = 1;
 static const char* fonts[] = {"JetBrainsMono Nerd Font Mono:size=15",
                               "monospace:size=15"};
 static const char dmenufont[] = "JetBrainsMono Nerd Font Mono:size=15";
@@ -30,11 +31,11 @@ static const unsigned int alphas[][3] = {
 };
 
 /* tagging */
-static const char* tags[] = {"", "", "", "", "",
-                             "", "", "", ""};
+static const char* tags[] = {"󰈹", "󰈹", "", "", "",
+                             "",  "",  "", ""};
 
 static const char* tagsel[][2] = {
-    {"#DD5144", "#444444"}, {"#FFCD46", "#444444"}, {"#57A143", "#444444"},
+    {"#FF9500", "#444444"}, {"#FFCB00", "#444444"}, {"#57A143", "#444444"},
     {"#2AB5C1", "#444444"}, {"#ffffff", "#444444"}, {"#ffffff", "#444444"},
     {"#ffffff", "#444444"}, {"#1DB954", "#444444"}, {"#ffffff", "#444444"},
 };
@@ -48,7 +49,7 @@ static const Rule rules[] = {
      */
     /* class      instance    title       tags mask     isfloating   monitor */
     {"Gimp", NULL, NULL, 0, 1, -1},
-    {"Firefox", NULL, NULL, 1 << 8, 0, -1},
+    // {"Firefox", NULL, NULL, 1 << 8, 0, -1},
     {NULL, NULL, "SafeEyes-0", 0, 1, 0},
     {NULL, NULL, "SafeEyes-1", 0, 1, 1},
 };
