@@ -311,7 +311,7 @@ alias gobusterDirbuster="gobuster dir -w /usr/share/dirbuster/wordlists/director
 alias mscanz='sudo masscan -p1-65535,U:1-65535 $1 --rate=1000 -e tun0 --wait 5 > mscan.txt'
 
 # ---- nmap alias ----
-alias nmapz='python3 /home/herrken/scripts/gen_nmap.py; while read item; do ip=$(echo "$item" | awk '\''{print $1}'\''); ports=$(echo "$item" | awk -F '\''-p '\'' '\''{print $2}'\'' | sed '\''s/,$//'\'' ); sudo nmap -sV -sC -sS -p "$ports" "$ip"; done < nmap.txt; rm mscan.txt nmap.txt'
+alias nmapz='python3 /home/herrken/github/scripts/gen_nmap.py; while read item; do ip=$(echo "$item" | awk '\''{print $1}'\''); ports=$(echo "$item" | awk -F '\''-p '\'' '\''{print $2}'\'' | sed '\''s/,$//'\'' ); sudo nmap -sV -sC -sS -p "$ports" "$ip"; done < nmap.txt; rm mscan.txt nmap.txt'
 
 # ---- Github ----
 alias b='git branch -a'
@@ -323,7 +323,7 @@ alias s='git status'
 alias m='sudo mount /dev/sdb1 /media/herrken'
 
 # ---- Bat Cat ----
-alias cat='batcat $1'
+alias cat='batcat'
 
 # ---- Git Graph ----
 alias graph='git log --oneline --all --graph'
@@ -336,6 +336,13 @@ alias panel='xfce4-panel'
 
 # ---- bluetooth ----
 alias blue='blueman-manager'
+
+# Monitor Control
+alias off='xrandr --output eDP-1 --off'
+alias on='xrandr --output eDP-1 --auto --below HDMI-1-0'
+
+# ---- discordo ----
+alias discordo='~/discordo/discordo'
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"

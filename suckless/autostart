@@ -5,5 +5,9 @@ picom &
 xrandr --output HDMI-1-0 --auto --above eDP-1 --rotate inverted &
 slstatus &
 safeeyes &
-dwm # MUST BE AT END
+notion-desktop &
+thunderbird &
+newsflash &
+foliate &
+dwm # MUST BE AT END 
 
