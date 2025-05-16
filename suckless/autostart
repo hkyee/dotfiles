@@ -5,9 +5,14 @@ picom &
 xrandr --output HDMI-1-0 --auto --above eDP-1 --rotate inverted &
 slstatus &
 safeeyes &
-notion-desktop &
+notion-snap-reborn &
 thunderbird &
 newsflash &
 foliate &
+brightness-controller &
+libreoffice &
+obsidian &
+weechat &
+discordo &
 dwm # MUST BE AT END 
 

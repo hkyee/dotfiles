@@ -318,10 +318,6 @@ alias b='git branch -a'
 alias s='git status'
 
 
-
-# ---- Mount Drive ----
-alias m='sudo mount /dev/sdb1 /media/herrken'
-
 # ---- Bat Cat ----
 alias cat='batcat'
 
