@@ -1,18 +1,20 @@
 #!/bin/sh
 
-feh --bg-fill ~/Pictures/Wallpapers/911.jpg &
+feh --bg-fill ~/Pictures/Wallpapers/Foggy_forest.jpg &
 picom &
-xrandr --output HDMI-1-0 --auto --above eDP-1 --rotate inverted &
+xrandr --output HDMI-1-0 --auto --right-of eDP-1 & #--rotate inverted #--above eDP-1
 slstatus &
 safeeyes &
+brightness-controller &
+(sleep 2 && pactl set-sink-volume @DEFAULT_SINK@ 100%) &
 notion-snap-reborn &
 thunderbird &
 newsflash &
 foliate &
-brightness-controller &
 libreoffice &
 obsidian &
-weechat &
-discordo &
-dwm # MUST BE AT END 
+okular &
+clipmenud &
+fcitx5 &
+exec dwm # MUST BE AT END 
 

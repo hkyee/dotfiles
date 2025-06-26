@@ -1,0 +1,3 @@
+[submodule "suckless/external/clipmenu"]
+	path = suckless/external/clipmenu
+	url = https://github.com/cdown/clipmenu.git

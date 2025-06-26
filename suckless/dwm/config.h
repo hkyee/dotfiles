@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx = 0; /* border pixel of windows */
+static const unsigned int borderpx = 3; /* border pixel of windows */
 static const unsigned int gappx = 5;    /* gaps between windows */
 static const unsigned int snap = 32;    /* snap pixel */
 static const int showbar = 0;           /* 0 means no bar */
@@ -15,7 +15,7 @@ static const char col_gray1[] = "#000000";
 static const char col_gray2[] = "#444444";
 static const char col_gray3[] = "#bbbbbb";
 static const char col_gray4[] = "#eeeeee";
-static const char col_yellow[] = "#444444";
+static const char col_yellow[] = "#1c702d";
 static const unsigned int baralpha = 0xd0;
 static const unsigned int borderalpha = OPAQUE;
 static const char* colors[][3] = {
@@ -31,13 +31,12 @@ static const unsigned int alphas[][3] = {
 };
 
 /* tagging */
-static const char* tags[] = {"󰈹", "󰈹", "", "", "",
-                             "",  "",  "", ""};
+static const char* tags[] = {"1", "2", "3", "4", "5", "6", "7", "", ""};
 
 static const char* tagsel[][2] = {
-    {"#FF9500", "#444444"}, {"#FFCB00", "#444444"}, {"#57A143", "#444444"},
-    {"#2AB5C1", "#444444"}, {"#ffffff", "#444444"}, {"#ffffff", "#444444"},
-    {"#ffffff", "#444444"}, {"#1DB954", "#444444"}, {"#ffffff", "#444444"},
+    {"#2AB5C1", "#444444"}, {"#2AB5C1", "#444444"}, {"#2AB5C1", "#444444"},
+    {"#2AB5C1", "#444444"}, {"#2AB5C1", "#444444"}, {"#2AB5C1", "#444444"},
+    {"#2AB5C1", "#444444"}, {"#1DB954", "#444444"}, {"#2AB5C1", "#444444"},
 };
 
 static const unsigned int tagalpha[] = {OPAQUE, baralpha};
@@ -97,6 +96,11 @@ static const char* dmenucmd[] = {
     "dmenu_run", "-m",  dmenumon,   "-fn", dmenufont, "-nb", col_gray1, "-nf",
     col_gray3,   "-sb", col_yellow, "-sf", col_gray4, NULL};
 static const char* termcmd[] = {"st", NULL};
+static const char* screenshotcmd[] = {"xfce4-screenshooter", "-r", NULL};
+static const char* clipmenu[] = {
+    "clipmenu", "-i",      "-fn", "Terminus:size=15", "-nb", "#002b36",
+    "-nf",      "#839496", "-sb", "#073642",          "-sf", "#93a1a1",
+    NULL};
 
 #include "movestack.c"
 
@@ -131,6 +135,8 @@ const Key keys[] = {
         TAGKEYS(XK_5, 4) TAGKEYS(XK_6, 5) TAGKEYS(XK_7, 6) TAGKEYS(XK_8, 7)
             TAGKEYS(XK_9, 8){MODKEY | ShiftMask, XK_q, quit, {0}},
     {0, HOLDKEY, holdbar, {0}},
+    {MODKEY | ShiftMask, XK_s, spawn, {.v = screenshotcmd}},
+    {MODKEY, XK_v, spawn, {.v = clipmenu}},
 };
 
 /* button definitions */

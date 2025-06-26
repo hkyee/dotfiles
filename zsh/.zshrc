@@ -340,8 +340,10 @@ alias on='xrandr --output eDP-1 --auto --below HDMI-1-0'
 # ---- discordo ----
 alias discordo='~/discordo/discordo'
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+# #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+# export SDKMAN_DIR="$HOME/.sdkman"
+# [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 export PATH=$PATH:/home/herrken/.spicetify
+export PATH="$HOME/.cargo/bin:$PATH"
+export EDITOR='nvim';
