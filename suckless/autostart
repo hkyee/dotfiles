@@ -2,11 +2,11 @@
 
 feh --bg-fill ~/Pictures/Wallpapers/Foggy_forest.jpg &
 picom &
-xrandr --output HDMI-1-0 --auto --right-of eDP-1 & #--rotate inverted #--above eDP-1
+xrandr --output HDMI-1-0 --auto --rotate inverted --above eDP-1 & #--right-of eDP-1  
 slstatus &
 safeeyes &
 brightness-controller &
-(sleep 2 && pactl set-sink-volume @DEFAULT_SINK@ 100%) &
+(sleep 2 && pactl set-sink-volume @DEFAULT_SINK@ 40%) &
 notion-snap-reborn &
 thunderbird &
 newsflash &

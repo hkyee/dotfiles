@@ -1,0 +1,54 @@
+#!/bin/bash
+
+# Brightness delta from command-line
+DELTA="$1"
+
+# Get mouse coordinates
+eval "$(xdotool getmouselocation --shell)"
+mouse_x=$X
+mouse_y=$Y
+
+# Cache xrandr verbose output once
+xrandr_verbose=$(xrandr --verbose)
+
+# Loop through connected monitors
+xrandr --query | grep " connected" | while read -r line; do
+    read -r name _ <<< "$line"
+    respos=$(grep -oP '\d+x\d+\+\d+\+\d+' <<< "$line")
+
+    # Extract monitor-specific info from cached verbose output
+    monitor_info=$(awk -v name="$name" '
+        $1 == name { in_block=1; next }
+        in_block && NF == 0 { exit }
+        in_block { print }
+    ' <<< "$xrandr_verbose")
+
+    # Extract brightness and gamma
+    brightness=$(awk '/Brightness:/ {print $2; exit}' <<< "$monitor_info")
+    gamma=$(awk '/Gamma:/ {print $2; exit}' <<< "$monitor_info")
+    IFS=':' read -r gamma_r gamma_g gamma_b <<< "$gamma"
+
+    # Compute new brightness
+    new_brightness=$(awk -v b="$brightness" -v d="$DELTA" 'BEGIN { printf "%.4f", b + d }')
+
+    if (( $(awk "BEGIN {print ($new_brightness > 1.0)}") )); then
+        new_brightness=1.0
+    fi
+
+    # Compute inverse gamma
+    inv_r=$(awk -v g="$gamma_r" 'BEGIN { printf "%.4f", 1/g }')
+    inv_g=$(awk -v g="$gamma_g" 'BEGIN { printf "%.4f", 1/g }')
+    inv_b=$(awk -v g="$gamma_b" 'BEGIN { printf "%.4f", 1/g }')
+
+    # Parse resolution and position
+    IFS='+x' read -r width height x_off y_off <<< "${respos//[+]/+}" # normalize delimiter
+    x_end=$((x_off + width))
+    y_end=$((y_off + height))
+
+    if (( mouse_x >= x_off && mouse_x < x_end && mouse_y >= y_off && mouse_y < y_end )); then
+        echo "Setting brightness on $name to $new_brightness"
+        xrandr --output "$name" --brightness "$new_brightness" --gamma "$inv_r:$inv_g:$inv_b"
+        exit 0
+    fi
+done
+

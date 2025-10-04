@@ -6,6 +6,8 @@ const unsigned int interval = 1000;
 /* text to show if no value can be retrieved */
 static const char unknown_str[] = "n/a";
 
+const char* pulsebar(const char* arg);
+
 /* maximum output string length */
 #define MAXLEN 2048
 
@@ -65,11 +67,12 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
     /* function format          argument */
-    {datetime, "^b#1b5c11^ %s ", "%F  %T "},
+    {pulsebar, "^b#065535^ %s | ", NULL},
+    {datetime, "^b#065535^ %s | ", "%F  %T "},
     //{cpu_perc, "CPU %s%%   ", NULL},
     //{ram_perc, "RAM %s%%   ", NULL},
-    {battery_perc, "^b#1b5c11^ 󰂄 %s%% ", "BAT1"},
-    {battery_remaining, "^b#1b5c11^ %s ", "BAT1"},
-    {temp, "^b#1b5c11^ 󰔄 %s  ", "/sys/class/thermal/thermal_zone6/temp"}
+    {battery_perc, "^b#065535^ 󰂄 %s%% | ", "BAT1"},
+    {battery_remaining, "^b#065535^ %s | ", "BAT1"},
+    {temp, "^b#065535^ 󰔄 %s  ", "/sys/class/thermal/thermal_zone6/temp"}
 
 };

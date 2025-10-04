@@ -1,5 +1,5 @@
 /* See LICENSE file for copyright and license details. */
-
+#include <X11/XF86keysym.h>
 /* appearance */
 static const unsigned int borderpx = 3; /* border pixel of windows */
 static const unsigned int gappx = 5;    /* gaps between windows */
@@ -101,6 +101,7 @@ static const char* clipmenu[] = {
     "clipmenu", "-i",      "-fn", "Terminus:size=15", "-nb", "#002b36",
     "-nf",      "#839496", "-sb", "#073642",          "-sf", "#93a1a1",
     NULL};
+static const char* audio_switch[] = {"audio_output_switch"};
 
 #include "movestack.c"
 
@@ -137,6 +138,15 @@ const Key keys[] = {
     {0, HOLDKEY, holdbar, {0}},
     {MODKEY | ShiftMask, XK_s, spawn, {.v = screenshotcmd}},
     {MODKEY, XK_v, spawn, {.v = clipmenu}},
+    {MODKEY, XK_Menu, spawn, {.v = audio_switch}},
+    {0, XF86XK_AudioRaiseVolume, spawn,
+     SHCMD("pactl set-sink-volume @DEFAULT_SINK@ +5%")},
+    {0, XF86XK_AudioLowerVolume, spawn,
+     SHCMD("pactl set-sink-volume @DEFAULT_SINK@ -5%")},
+    {0, XF86XK_MonBrightnessDown, spawn,
+     SHCMD("brightness_control_by_hover_2 -0.05")},
+    {0, XF86XK_MonBrightnessUp, spawn,
+     SHCMD("brightness_control_by_hover_2 0.05")},
 };
 
 /* button definitions */

@@ -6,9 +6,17 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 // static char *font = "mono:pixelsize=20:antialias=true:autohint=true";
-static char* font =
-    "JetBrainsMono Nerd Font Mono:pixelsize=20:antialias=true:autohint=true";
+// static char* font = "JetBrainsMono Nerd Font Mono:pixelsize=20"
+//                     ":antialias=true:autohint=true,Noto Sans Mono CJK "
+//                     "SC:size=11,WenQuanYi Micro Hei Mono:size=11";
+
+static char* font = "JetBrainsMono Nerd Font "
+                    "Mono:pixelsize=20:antialias=true:autohint=true,Noto Sans "
+                    "CJK SC:pixelsize=20";
+
 static char* font2[] = {
+    "NotoColorEmoji:pixelsize=15:antialias=true:autohint=true",
+    "WenQuanYi Zen Hei Mono:pixelsize=20:antialias=true:autohint=true",
     "NotoColorEmoji:pixelsize=15:antialias=true:autohint=true"};
 static int borderpx = 5;
 

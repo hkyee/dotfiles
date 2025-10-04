@@ -3,6 +3,8 @@ VERSION = 0.8.5
 
 # Customize below to fit your system
 
+XFT = 1
+
 # paths
 PREFIX = /usr/local
 MANPREFIX = $(PREFIX)/share/man
